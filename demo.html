@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HPlate</title>
+</head>
+<body>
+
+<div id="out">Loading...</div>
+
+<script type="text/template" id="template">
+    <div class="wrap">
+
+        %[if %{name.first}]
+            <p> hello world</p>
+        %[end]
+
+
+        <h1>My name %{name.first} %{name.last}</h1>
+
+
+        %[if %{name.last}]
+            <p>Hello world - my name is  <b>%{name.first} %{name.last}</b></p>
+        %[end]
+
+
+        %[if %{fls}]
+            <p>Hello world - this is false Block</p>
+        %[end]
+
+    </div>
+</script>
+
+
+<script type="text/javascript" src="js/hplate.js"></script>
+<script type="text/javascript">
+    
+    var data = {
+        name: {
+            first: 'hamid',
+            last: 'raza'
+        },
+        fls: 'hamid' == 'raza'
+    };
+    
+    var html = document.getElementById('template').innerHTML;
+    var hp = new hplate(html, data);
+
+    console.log(hp.getText());
+    document.getElementById('out').innerHTML = hp.getText();
+</script>
+</body>
+</html>
