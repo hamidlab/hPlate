@@ -18,3 +18,11 @@ hPlate is a simple template engine (javascript)
     ar hp = new hplate(html, data);
 
     console.log(hp.getText());
+
+
+### Demo
+
+[http://hamidlab.github.io/hPlate/demo.html]
+
+
+[http://hamidlab.github.io/hPlate/demo.html]: http://hamidlab.github.io/hPlate/demo.html
