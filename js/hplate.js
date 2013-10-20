@@ -55,7 +55,6 @@ function hplate(text, data){
                 break;
         }
 
-        //text = text.replace(regs.blockStart(blck), '').replace(regs.blockEnd, '');
         return text;
     }
 
@@ -80,11 +79,7 @@ function hplate(text, data){
             text = text.replace(blocks[i], _this.getBlockText(s, blocks[i]));
         }
 
-        //console.log(text);
-
         return text;
-        //console.log(blocks);
-
     }
 
     this.getText = function(){
